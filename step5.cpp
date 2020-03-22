@@ -36,14 +36,14 @@ private:
 
 public:
     CoffeeMachine(string filename) {
-        this->file.open(filename);
+        file.open(filename);
         if(!file.is_open()) {
             throw std::runtime_error("Unable to open file");
         }
-        this->file >> this->canMakeCappuccino;
-        this->file >> this->pressure;
-        this->file >> this->price;
-        this->file >> hex >> this->colour;
+        file >> canMakeCappuccino;
+        file >> pressure;
+        file  this->price;
+        file >> hex >> colour;
         temperature = 20;
         isStraitOpened = false;
         cout << "The default constructor was called" << endl;
